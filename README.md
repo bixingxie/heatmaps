@@ -9,7 +9,7 @@
 # Visualizations
 1. Gray scale heat map: 
 
-    runtime: ~8s
+    runtime: ~3s
   
     script: [gray_scale.py](https://github.com/bixingxie/heatmaps/blob/master/gray_scale.py)
   

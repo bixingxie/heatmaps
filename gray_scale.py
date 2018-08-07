@@ -4,7 +4,7 @@ import numpy as np
 from pyspark import sql, SparkConf, SparkContext
 from PIL import Image
 
-def tuples(a): 
+def tuples(a):
     return (a, a, a)
 
 conf = SparkConf().setAppName("Read_CSV")
@@ -20,7 +20,10 @@ df['d'] = df['d'].apply(tuples)
 img = Image.new( 'RGB', (501,501), "white")
 pixels = img.load()
 
-for i in range(len(df['x'])): 
-    pixels[df.at[i, 'x'], df.at[i, 'y']] = df.at[i, 'd']
+dnp = df.values
+for i in range(len(df['x'])):
+    pixels[dnp[i][0], dnp[i][1]] = dnp[i][2]
 
+#image is flipped by PIL
+img=img.rotate(180, expand=True)
 img.show()
