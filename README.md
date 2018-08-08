@@ -13,4 +13,4 @@
   
     script: [gray_scale.py](https://github.com/bixingxie/heatmaps/blob/master/gray_scale.py)
   
-    ![Gray scale heat map](https://github.com/bixingxie/heatmaps/blob/master/images/gray_scale.png)
+    ![Gray scale heat map](https://github.com/bixingxie/heatmaps/blob/master/images/grayscale.png)
